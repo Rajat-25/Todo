@@ -5,9 +5,9 @@ export default class Todo extends Component {
     super();
     this.state = {
       tasks: [
-        { task: 'Go for a walk', id: '1' },
-        { task: 'Buy Groceries', id: '2' },
-        { task: 'Do Yoga', id: '3' },
+        { task: 'Write an article', id: '1' },
+        { task: 'Do yoga', id: '2' },
+        { task: 'Learn Javascript', id: '3' },
       ],
       currentTask: '',
     };
@@ -34,7 +34,7 @@ export default class Todo extends Component {
   render() {
     return (
       <div className='container'>
-        <h3 className='title'>To Do App</h3>
+        <h3 className='title'>ToDo App</h3>
         <div className='input-field'>
           <input
             type='text'
@@ -44,7 +44,7 @@ export default class Todo extends Component {
             onChange={this.onInputChange}
           />
           <button onClick={this.addTask} className='inputSubmit'>
-            Submit
+            Add
           </button>
         </div>
         <ul className='task-list'>
