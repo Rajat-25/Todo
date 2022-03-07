@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
 import './Todo.css';
 export default class Todo extends Component {
-  constructor() {
-    super();
-    this.state = {
-      tasks: [
-        { task: 'Write an article', id: '1' },
-        { task: 'Do yoga', id: '2' },
-        { task: 'Learn Javascript', id: '3' },
-      ],
-      currentTask: '',
-    };
-  }
+  state = {
+    tasks: [],
+    currentTask: '',
+  };
+
   onInputChange = (e) => {
     this.setState({ currentTask: e.target.value });
   };
@@ -34,7 +28,7 @@ export default class Todo extends Component {
   render() {
     return (
       <div className='container'>
-        <h3 className='title'>ToDo App</h3>
+        <h3 className='title'>Todo App</h3>
         <div className='input-field'>
           <input
             type='text'
